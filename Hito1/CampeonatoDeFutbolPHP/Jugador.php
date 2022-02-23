@@ -51,10 +51,10 @@
 		}
 
 		function imprimir(){
-			echo "\t- ". $nombreCompleto;
-			echo "\t- ". $apellidos; 
-			echo "\t- ". $ci; 
-			echo "\t- ". $edad; 
+			echo "\t- ". $nombreCompleto . "<br>";
+			echo "\t- ". $apellidos . "<br>"; 
+			echo "\t- ". $ci . "<br>"; 
+			echo "\t- ". $edad . "<br>"; 
 		}
 	}
 ?>

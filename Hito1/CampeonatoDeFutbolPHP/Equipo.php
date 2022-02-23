@@ -1,60 +1,52 @@
 <?php
-inlcude "./Jugador.php";
+include "./Jugador.php";
 	class Equipo
 	{
 		private $nombreEquipo = "";
 		private $categoria = "";
-		private $jugadores[];
+		private $jugadores[] = new Jugador;
 
-		function __construct($name, $lastName, $id, $age)
+		function __construct($name, $category, $players[])
 		{
 			$this->nombreCompleto($name);
-			$this->apellidos($lastName);
-			$this->ci($id);
-			$this->edad($age);
+			$this->categoria($category);
+			$this->jugadores($players);
 		}
 
-		function getNombreCompleto()
+		function getNombreEquipo()
 		{
-			return $nombreCompleto;
+			return $nombreEquipo;
 		}
 
-		function setNombreCompleto($name){
-			$this->nombreCompleto($name);
+		function setNombreEquipo($name){
+			$this->nombreEquipo($name);
 		}
 
-		function getApellidos()
+		function getCategoria()
 		{
-			return $apellidos;
+			return $categoria;
 		}
 
-		function setApellidos($lastName){
-			$this->apellidos($lastName);
+		function setCategoria($category){
+			$this->categoria($category);
 		}
 
-		function getCi()
+		function getJugadores()
 		{
-			return $ci;
+			return $jugadores;
 		}
 
-		function setCi($id){
-			$this->ci($id);
-		}
-
-		function getEdad()
-		{
-			return $edad;
-		}
-
-		function setEdad($age){
-			$this->edad($age);
+		function setJugadores($players[] = new Jugador){
+			$this->jugadores($players);
 		}
 
 		function imprimir(){
-			echo "\t- ". $nombreCompleto;
-			echo "\t- ". $apellidos; 
-			echo "\t- ". $ci; 
-			echo "\t- ". $edad; 
+			echo $nombreEquipo . "<br>";
+			echo $categoria . "<br>";
+
+			for ($i = 0; $i < count($jugadores); $i++) { 
+				$jugadores[$i]->imprimir();
+			}
 		}
 	}
 ?>
