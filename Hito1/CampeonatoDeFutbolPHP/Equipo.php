@@ -1,10 +1,10 @@
 <?php
+inlcude "./Jugador.php";
 	class Equipo
 	{
-		private $nombreCompleto = "";
-		private $apellidos = "";
-		private $ci = "";
-		private $edad = 0;
+		private $nombreEquipo = "";
+		private $categoria = "";
+		private $jugadores[];
 
 		function __construct($name, $lastName, $id, $age)
 		{
