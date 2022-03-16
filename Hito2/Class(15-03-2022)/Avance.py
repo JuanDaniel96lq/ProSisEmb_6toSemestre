@@ -1,7 +1,7 @@
 # Hola Mundo con concatenación
 message = "CLASE 15 de Marzo de 2022"
 
-print(message, "- Daniel", "LQ")
+print(message, "- Daniel", "Laura Quispe")
 
 number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
